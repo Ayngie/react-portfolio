@@ -1,0 +1,28 @@
+// filepath: /Users/angelica/Code/Ayngie.nosync/react-portfolio/src/App.scss
+@import url('https://fonts.googleapis.com/css?family=Damion&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 64px; // Adjust for navbar height
+
+  .full-viewport-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 64px; // Ensures anchor links are visible below navbar
+  }
+}
