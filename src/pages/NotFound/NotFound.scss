@@ -1,0 +1,7 @@
+@use '../../styles/variables' as *;
+
+.not-found {
+  text-align: center;
+  margin: 4rem auto;
+  color: $darker-green;
+}

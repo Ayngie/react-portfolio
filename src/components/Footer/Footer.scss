@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .footer {
   width: 100vw;
   display: flex;
@@ -24,6 +26,7 @@
     display: flex;
     align-items: center;
     transition: transform 0.15s;
+    color: $primary-green;
 
     &:hover,
     &:focus {
@@ -37,7 +40,7 @@
 
   .footer-copyright {
     font-size: 1rem;
-    color: darkgreen;
+    color: $primary-green;
     text-align: center;
   }
 }

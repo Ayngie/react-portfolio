@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home/Home';
 import AboutMe from './pages/AboutMe/AboutMe';
 import Projects from './pages/Projects';
-import NotFound from './pages/NotFound';
+import NotFound from './pages/NotFound/NotFound';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
