@@ -23,11 +23,11 @@ const NavBar: React.FC<NavBarProps> = ({ brandName, navItems }) => {
           to="/"
           className="navbar-title"
           onClick={handleLinkClick}
-          style={{ textDecoration: 'none' }}>
+          aria-label="Home">
           {brandName}
         </Link>
         <button
-          className={`navbar-toggle${menuOpen ? ' open' : ''}`}
+          className={`navbar-toggle ${menuOpen ? ' open' : ''}`}
           aria-label="Toggle navigation"
           onClick={handleToggle}>
           <span className="hamburger"></span>
@@ -35,7 +35,7 @@ const NavBar: React.FC<NavBarProps> = ({ brandName, navItems }) => {
           <span className="hamburger"></span>
         </button>
       </div>
-      <ul className={`navbar-menu${menuOpen ? ' open' : ''}`}>
+      <ul className={`navbar-menu ${menuOpen ? ' open' : ''}`}>
         {navItems.map((linkItem) => (
           <li key={linkItem.linkTo}>
             <Link to={linkItem.linkTo} onClick={handleLinkClick}>
