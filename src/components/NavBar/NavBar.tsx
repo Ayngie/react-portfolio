@@ -16,7 +16,7 @@ const NavBar: React.FC<NavBarProps> = ({ brandName, navItems }) => {
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
-    <nav className="navbar">
+    <nav aria-label="Main navigation" className="navbar">
       <div className="navbar-brand">
         <img src={headshot} alt="Portrait" className="navbar-headshot" />
         <Link

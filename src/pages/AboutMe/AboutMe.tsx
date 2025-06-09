@@ -4,7 +4,7 @@ import './AboutMe.scss';
 
 const AboutMe: React.FC = () => (
   <section id="About" className="full-viewport-section">
-    <h2>About me</h2>
+    <h1>About me</h1>
     <img
       src={headshot}
       alt="AI-generated headshot"

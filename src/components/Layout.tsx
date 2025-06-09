@@ -11,7 +11,9 @@ const navLinks = [
 
 const Layout: React.FC = () => (
   <>
-    <NavBar navItems={navLinks} brandName="Angelica Reuterswärd" />
+    <header>
+      <NavBar navItems={navLinks} brandName="Angelica Reuterswärd" />
+    </header>
     <main>
       <Outlet />
     </main>
