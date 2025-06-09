@@ -7,6 +7,7 @@ const navLinks = [
   { linkTo: '/', label: 'Home' },
   { linkTo: '/about', label: 'About' },
   { linkTo: '/projects', label: 'Projects' },
+  { linkTo: '/contact', label: 'Contact' },
 ];
 
 const Layout: React.FC = () => (
