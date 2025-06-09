@@ -1,13 +1,26 @@
 .footer {
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem 0 1rem 0;
   background: #e6f9ec;
   border-top: 1px solid #cceedd;
+  padding: 2rem 0 1rem 0;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
 
-  a {
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links a {
     display: flex;
     align-items: center;
     transition: transform 0.15s;
@@ -20,5 +33,20 @@
     svg {
       display: block;
     }
+  }
+
+  .footer-copyright {
+    font-size: 1rem;
+    color: #222;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    .footer-links {
+      gap: 1rem;
+    }
+    padding: 1.5rem 0 0.5rem 0;
   }
 }
