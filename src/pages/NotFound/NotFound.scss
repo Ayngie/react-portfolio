@@ -4,4 +4,26 @@
   text-align: center;
   margin: 4rem auto;
   color: $darker-green;
+
+  &-title {
+    font-size: 3em;
+  }
+
+  &-info {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .not-found {
+    margin: 2rem auto;
+
+    &-title {
+      font-size: 2em;
+    }
+
+    &-info {
+      font-size: 1em;
+    }
+  }
 }
