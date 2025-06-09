@@ -1,0 +1,56 @@
+@mixin themeColor {
+  background: rgb(255, 0, 111);
+}
+
+@mixin heart {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .heart {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    transform: rotate(45deg);
+    animation: heart 1.5s infinite;
+    @include themeColor;
+  }
+  .heart::before,
+  .heart::after {
+    position: absolute;
+    content: '';
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    @include themeColor;
+  }
+  .heart::before {
+    left: -35px;
+  }
+  .heart::after {
+    top: -35px;
+    left: 0px;
+  }
+
+  @keyframes heart {
+    0% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    5% {
+      transform: rotate(45deg) scale(0.9);
+    }
+    10% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    15% {
+      transform: rotate(45deg) scale(1);
+    }
+    50% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    100% {
+      transform: rotate(45deg) scale(0.8);
+    }
+  }
+}
