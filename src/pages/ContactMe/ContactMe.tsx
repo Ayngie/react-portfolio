@@ -39,13 +39,12 @@ const ContactMe: React.FC = () => {
 
   return (
     <section id="contact" className="full-viewport-section">
+      <h1>Contact Me</h1>
       <form
         ref={formRef}
         className="contact-form"
         onSubmit={handleSubmit(onSubmit)}
         noValidate>
-        <h1>Contact Me</h1>
-
         <div>
           <label htmlFor="user_name">Name</label>
           <input
