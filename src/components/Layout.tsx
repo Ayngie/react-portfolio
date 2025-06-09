@@ -1,16 +1,21 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar';
+import { Outlet } from 'react-router-dom';
+import Footer from './Footer/Footer';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
+const navLinks = [
+  { linkTo: '/', label: 'Home' },
+  { linkTo: '/about', label: 'About' },
+  { linkTo: '/projects', label: 'Projects' },
+];
 
-const navItems = ['Home', 'About', 'Projects'];
-
-const Layout: React.FC<LayoutProps> = ({ children }) => (
+const Layout: React.FC = () => (
   <>
-    <NavBar brandName="Angelica Reuterswärd" navItems={navItems} />
-    {children}
+    <NavBar navItems={navLinks} brandName="Angelica Reuterswärd" />
+    <main>
+      <Outlet />
+    </main>
+    <Footer />
   </>
 );
 

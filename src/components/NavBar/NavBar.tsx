@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './NavBar.scss';
 import headshot from '../../assets/headshot.jpg';
+import { Link } from 'react-router-dom';
 
 interface NavBarProps {
   brandName: string;
-  navItems: string[];
+  navItems: { linkTo: string; label: string }[];
 }
 
 const NavBar: React.FC<NavBarProps> = ({ brandName, navItems }) => {
@@ -18,13 +19,13 @@ const NavBar: React.FC<NavBarProps> = ({ brandName, navItems }) => {
     <nav className="navbar">
       <div className="navbar-brand">
         <img src={headshot} alt="Portrait" className="navbar-headshot" />
-        <a
-          href="#Home"
+        <Link
+          to="/"
           className="navbar-title"
           onClick={handleLinkClick}
           style={{ textDecoration: 'none' }}>
           {brandName}
-        </a>
+        </Link>
         <button
           className={`navbar-toggle${menuOpen ? ' open' : ''}`}
           aria-label="Toggle navigation"
@@ -35,11 +36,11 @@ const NavBar: React.FC<NavBarProps> = ({ brandName, navItems }) => {
         </button>
       </div>
       <ul className={`navbar-menu${menuOpen ? ' open' : ''}`}>
-        {navItems.map((item) => (
-          <li key={item}>
-            <a href={`#${item}`} onClick={handleLinkClick}>
-              {item}
-            </a>
+        {navItems.map((linkItem) => (
+          <li key={linkItem.linkTo}>
+            <Link to={linkItem.linkTo} onClick={handleLinkClick}>
+              {linkItem.label}
+            </Link>
           </li>
         ))}
       </ul>
