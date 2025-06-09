@@ -1,5 +1,26 @@
 @use '../../styles/mixins' as *;
 
-.heart-container {
-  @include heart;
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .title-container {
+    .home-title {
+      font-family: 'Playfair Display', sans-serif;
+      text-transform: uppercase;
+    }
+    .FED {
+      font-size: 1.5rem;
+    }
+    .PORTFOLIO {
+      font-size: 4rem;
+    }
+  }
+
+  .heart-container {
+    @include heart;
+  }
 }
