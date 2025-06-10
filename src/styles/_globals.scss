@@ -1,5 +1,20 @@
 @use './variables' as *;
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $darker-green;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
 a {
   color: $primary-green;
   text-decoration: none;
@@ -25,4 +40,15 @@ button {
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   transition: background 0.2s;
+
+  &:hover,
+  &:focus {
+    background: $darker-green;
+    outline: none;
+  }
+
+  &:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
 }
