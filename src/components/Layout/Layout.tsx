@@ -23,6 +23,12 @@ const Layout: React.FC = () => (
     </header>
     <main id="main-content">
       <Outlet />
+      <a
+        href="#Home"
+        className="return-to-top-link"
+        aria-label="Return to top of page">
+        ↑ Return to top
+      </a>
     </main>
     <Footer />
   </>
