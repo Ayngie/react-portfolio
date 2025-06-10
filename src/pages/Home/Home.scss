@@ -1,6 +1,9 @@
 @use '../../styles/mixins' as *;
 
 .home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .title-container {
     .home-title {
       font-family: 'Playfair Display', sans-serif;
@@ -15,6 +18,25 @@
   }
 
   .heart-container {
-    @include heart;
+    @include largeHeart;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    .title-container {
+      .home-title {
+        font-size: 1.2rem;
+      }
+      .FED {
+        font-size: 1.2rem;
+      }
+      .PORTFOLIO {
+        font-size: 3rem;
+      }
+    }
+    .heart-container {
+      @include smallHeart;
+    }
   }
 }

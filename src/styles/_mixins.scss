@@ -2,8 +2,61 @@
   background: rgb(255, 0, 111);
 }
 
-@mixin heart {
+@mixin largeHeart {
   height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .heart {
+    position: relative;
+    height: 140px;
+    width: 140px;
+    transform: rotate(45deg);
+    animation: heart 1.5s infinite;
+    @include themeColor;
+  }
+  .heart::before,
+  .heart::after {
+    position: absolute;
+    content: '';
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    @include themeColor;
+  }
+  .heart::before {
+    left: -70px;
+  }
+  .heart::after {
+    top: -70px;
+    left: 0px;
+  }
+
+  @keyframes heart {
+    0% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    5% {
+      transform: rotate(45deg) scale(0.9);
+    }
+    10% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    15% {
+      transform: rotate(45deg) scale(1);
+    }
+    50% {
+      transform: rotate(45deg) scale(0.8);
+    }
+    100% {
+      transform: rotate(45deg) scale(0.8);
+    }
+  }
+}
+
+@mixin smallHeart {
+  height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +86,7 @@
     left: 0px;
   }
 
+  // Reuse the same keyframes
   @keyframes heart {
     0% {
       transform: rotate(45deg) scale(0.8);
