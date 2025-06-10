@@ -12,10 +12,15 @@ const navLinks = [
 
 const Layout: React.FC = () => (
   <>
+    {/* Accessibility: Skip link for keyboard users */}
+    <a href="#main-content" className="skip-link">
+      Skip to main content
+    </a>
+
     <header>
       <NavBar navItems={navLinks} brandName="Angelica Reuterswärd" />
     </header>
-    <main>
+    <main id="main-content">
       <Outlet />
     </main>
     <Footer />
