@@ -31,6 +31,13 @@ main {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+
+  .page-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 footer {
