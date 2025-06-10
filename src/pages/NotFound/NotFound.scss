@@ -12,6 +12,18 @@
   &-info {
     font-size: 1.5em;
   }
+  a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      background: $primary-green;
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      color: #fff;
+      outline: none;
+    }
+  }
 }
 
 @media (max-width: 600px) {
