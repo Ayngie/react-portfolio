@@ -1,4 +1,5 @@
 import './App.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
@@ -7,8 +8,8 @@ import Projects from './pages/Projects/Projects';
 import ContactMe from './pages/ContactMe/ContactMe';
 import NotFound from './pages/NotFound/NotFound';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// Entry point: Render the application with routing and error handling
 function App() {
   return (
     <ErrorBoundary>
@@ -28,4 +29,3 @@ function App() {
 }
 
 export default App;
-// This is the main entry point of the application.
