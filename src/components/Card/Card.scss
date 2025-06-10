@@ -1,0 +1,25 @@
+.card {
+  background: #fff;
+  padding: 2rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(20, 90, 50, 0.1);
+  margin: 1.5rem 0;
+  transition: box-shadow 0.2s;
+
+  font-size: 1.2rem;
+  font-family: Playfair Display, sans-serif;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 8px 24px rgba(20, 90, 50, 0.16);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}

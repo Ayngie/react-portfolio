@@ -38,7 +38,7 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="full-viewport-section">
+    <section id="contact" className="contact-section">
       <h1>Contact Me</h1>
       <form
         ref={formRef}
