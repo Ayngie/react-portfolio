@@ -1,26 +1,42 @@
 @use './styles/variables' as *;
 @use './styles/globals' as *;
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+// Layout container for the whole app
+#root,
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  background: rgb(255, 0, 128);
+  box-sizing: border-box; //for padding to be included in width
+}
+
+header {
+  background: $pastel-green;
+  padding: 1rem;
+  flex-shrink: 0; /* Prevent shrinking */
+  box-sizing: border-box;
 }
 
 main {
-  padding-top: 64px; // Adjust for navbar height
-  color: $darker-green;
+  flex: 1; /* Takes up remaining vertical space */
+  padding: 1rem;
+  background: rgb(249, 242, 241);
+  overflow-y: auto; /* Scrolls if content exceeds height */
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
 
-  .full-viewport-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    scroll-margin-top: 64px; // Ensures anchor links are visible below navbar
-  }
+footer {
+  background: $pastel-green;
+  padding: 1rem;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }

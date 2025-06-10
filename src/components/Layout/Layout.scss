@@ -1,7 +1,9 @@
+@use '../../styles/variables' as *;
+
 .skip-link {
-  position: absolute;
+  position: fixed;
   left: -999px;
-  top: auto;
+  top: 0;
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -15,7 +17,7 @@
 
   &:focus {
     left: 1rem;
-    top: 5rem;
+    top: 1rem;
     width: auto;
     height: auto;
     outline: 2px solid #145a32;
