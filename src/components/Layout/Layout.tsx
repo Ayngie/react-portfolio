@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../NavBar/NavBar';
 import { Outlet } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import './Layout.scss';
 
@@ -17,18 +17,22 @@ const Layout: React.FC = () => (
     <a href="#main-content" className="skip-link">
       Skip to main content
     </a>
-
     <header>
       <NavBar navItems={navLinks} brandName="Angelica Reuterswärd" />
     </header>
     <main id="main-content">
-      <Outlet />
-      <a
-        href="#Home"
-        className="return-to-top-link"
-        aria-label="Return to top of page">
-        ↑ Return to top
-      </a>
+      <article id="Home">
+        <Outlet />
+
+        <div className="return-to-top">
+          <a
+            href="#Home"
+            className="return-to-top-link"
+            aria-label="Return to top of page">
+            ↑ Return to top
+          </a>
+        </div>
+      </article>
     </main>
     <Footer />
   </>
