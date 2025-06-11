@@ -1,0 +1,42 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 9999;
+}
+
+.loader-text {
+  color: #fff;
+  font-size: 4em;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  animation: loader-blink 1s steps(2, start) infinite;
+  white-space: nowrap;
+}
+
+@keyframes loader-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .loader-text {
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    width: 100vw;
+    overflow: hidden;
+  }
+}
