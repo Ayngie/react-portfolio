@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.scss';
 import Card from '../../components/Card/Card';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => (
   <section id="Home" className="page-section">
@@ -9,7 +10,7 @@ const Home: React.FC = () => (
       <h2 className="home-title PORTFOLIO">Portfolio</h2>
     </div>
     <div className="heart-container">
-      <div className="heart" aria-label="Animated heart"></div>
+      <div className="heart" aria-hidden="true"></div>
     </div>
     <Card>
       <h3>Hi! I'm Angelica!</h3>
@@ -26,17 +27,25 @@ const Home: React.FC = () => (
         Once I realized, I took a Front-End Developer Degree from{' '}
         <a
           href="https://medieinstitutet.se/utbildningar/front-end-developer/"
-          target="blank">
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Medieinstitutet, Stockholm (opens in new tab)">
           Medieinstitutet, Stockholm
         </a>
         , interned for two periods at{' '}
         <a
           href="https://www.postnord.se/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          aria-label="PostNord Group IT (opens in new tab)">
           PostNord Group IT
         </a>
         , and now I'm here - ready to create amazing web experiences!
+      </p>
+      <p>
+        Feel free to <Link to="/contact">contact me</Link> regarding programming
+        jobs, learn more <Link to="/about">about me</Link>, or check out some of
+        my favorite <Link to="/projects">projects</Link>.
       </p>
     </Card>
   </section>
