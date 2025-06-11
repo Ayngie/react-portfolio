@@ -12,21 +12,41 @@
     justify-content: center;
     gap: 2rem;
     margin-bottom: 0.75rem;
-  }
 
-  .footer-links a {
-    display: flex;
-    align-items: center;
-    transition: transform 0.15s;
-    color: $primary-green;
+    a {
+      display: flex;
+      align-items: center;
+      color: $primary-green;
+      transition: transform 0.15s, color 0.2s;
+      cursor: pointer;
 
-    &:hover,
-    &:focus {
-      transform: scale(1.15);
-      outline: none;
-    }
-    svg {
-      display: block;
+      &:hover {
+        color: #e75480;
+
+        cursor: grab; // Fallback for browsers that don't support custom cursors
+        cursor: -webkit-grab;
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="28" font-size="28">👆</text></svg>')
+            16 0,
+          grab;
+      }
+
+      &:active {
+        cursor: grabbing; // Fallback for browsers that don't support custom cursors
+        cursor: -webkit-grabbing;
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="28" font-size="28">🌟</text></svg>')
+            16 0,
+          grabbing;
+      }
+
+      &:hover,
+      &:focus {
+        transform: scale(1.15);
+        outline: none;
+      }
+
+      svg {
+        display: block;
+      }
     }
   }
 
@@ -37,7 +57,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer {
     .footer-links {
       gap: 1rem;
