@@ -10,7 +10,7 @@ import NotFound from './pages/NotFound/NotFound';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 
 // Entry point: Render the application with routing and error handling
-function App() {
+const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <BrowserRouter>
@@ -26,6 +26,6 @@ function App() {
       </BrowserRouter>
     </ErrorBoundary>
   );
-}
+};
 
 export default App;
