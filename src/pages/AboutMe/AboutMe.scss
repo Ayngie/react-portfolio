@@ -10,3 +10,43 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.work-experience {
+  padding: 2rem 8rem 2rem 8rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(20, 90, 50, 0.1);
+  margin: 1.5rem 0;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 8px 24px rgba(20, 90, 50, 0.16);
+  }
+}
+
+figure {
+  margin: 0 0 2rem 0;
+  text-align: center;
+
+  blockquote,
+  figcaption {
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem 0;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-experience {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+  figure {
+    blockquote,
+    figcaption {
+      font-size: 1rem;
+    }
+  }
+}
