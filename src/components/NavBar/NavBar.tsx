@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NavBar.scss';
 import headshot from '../../assets/headshot.jpg';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 interface NavBarProps {
   brandName: string;
@@ -38,9 +38,12 @@ const NavBar: React.FC<NavBarProps> = ({ brandName, navItems }) => {
       <ul className={`navbar-menu ${menuOpen ? ' open' : ''}`}>
         {navItems.map((linkItem) => (
           <li key={linkItem.linkTo}>
-            <Link to={linkItem.linkTo} onClick={handleLinkClick}>
+            <NavLink
+              to={linkItem.linkTo}
+              onClick={handleLinkClick}
+              onMouseUp={(e) => e.currentTarget.blur()}>
               {linkItem.label}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>

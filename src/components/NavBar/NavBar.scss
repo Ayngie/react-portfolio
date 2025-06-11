@@ -116,6 +116,13 @@
         outline: none;
         box-shadow: none;
       }
+      &.active {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        color: #007a4d;
+        background: #e6f9ec;
+        font-weight: 700;
+      }
     }
   }
 
