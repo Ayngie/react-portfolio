@@ -1,0 +1,1 @@
+.sub-card{padding:2rem 8rem;width:100%;border-radius:.5rem;box-shadow:0 4px 16px #145a321a;margin:1.5rem 0;transition:box-shadow .2s}.sub-card:hover,.sub-card:focus-within{box-shadow:0 8px 24px #145a3229}.sub-card>p{text-align:left}@media (max-width: 768px){.sub-card{padding:1rem .5rem;font-size:1rem}}
