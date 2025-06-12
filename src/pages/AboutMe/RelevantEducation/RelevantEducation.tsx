@@ -3,7 +3,7 @@ import Card from '../../../components/Cards/Card/Card';
 import SubCard from '../../../components/Cards/SubCard/SubCard';
 
 const RelevantEducation: React.FC = () => (
-  <Card id="education">
+  <Card id="relevant-education">
     <h2>Relevant education</h2>
     <SubCard>
       <p>

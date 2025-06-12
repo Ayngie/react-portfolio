@@ -8,8 +8,10 @@ interface CardProps {
   id?: string;
 }
 
-const Card: React.FC<CardProps> = ({ children, className = '' }) => (
-  <article className={`card ${className}`}>{children}</article>
+const Card: React.FC<CardProps> = ({ children, className = '', id = '' }) => (
+  <article id={id} className={`card ${className}`}>
+    {children}
+  </article>
 );
 
 export default Card;
