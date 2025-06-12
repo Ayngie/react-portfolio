@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use 'variables' as *;
 
 /**----------------------------------- HEART SHAPE MIXINS and ANIMATIONS -----------------------------------**/
@@ -21,10 +22,10 @@
     background: $color;
   }
   &::before {
-    left: -($size / 2);
+    left: math.div($size, -2);
   }
   &::after {
-    top: -($size / 2);
+    top: math.div($size, -2);
     left: 0;
   }
 }
@@ -133,11 +134,11 @@
       border-radius: 50%;
     }
     &::before {
-      top: -($size / 2);
+      top: math.div($size, -2);
       left: 0;
     }
     &::after {
-      left: -($size / 2);
+      left: math.div($size, -2);
       top: 0;
     }
   }
