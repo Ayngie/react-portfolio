@@ -1,0 +1,57 @@
+@use '../../styles/variables' as *;
+
+.repo-name-and-link {
+  font-size: 1.5rem;
+}
+.repo-description {
+  color: #333;
+}
+.repo-language {
+  color: #666;
+}
+
+.repo-live-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  padding: 0.5rem 1.2rem;
+  background: $primary-green;
+  color: $pastel-green;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(20, 90, 50, 0.07);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background: $darker-green;
+    color: $pastel-green;
+    text-decoration: underline;
+    box-shadow: 0 6px 20px rgba(20, 90, 50, 0.18);
+    transform: translateY(-2px) scale(1.04);
+  }
+}
+@media (max-width: 768px) {
+  .repo-name-and-link {
+    font-size: 1.2rem;
+  }
+  .repo-description {
+    font-size: 0.9rem;
+  }
+  .repo-language {
+    font-size: 0.8rem;
+  }
+
+  .repo-live-link {
+    font-size: 0.95rem;
+    padding: 0.45rem 1rem;
+  }
+}

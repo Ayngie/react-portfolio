@@ -1,0 +1,28 @@
+.main-github-link {
+  font-size: 1.2rem;
+}
+
+//Error messages
+.fetch-error {
+  color: red;
+  padding: 1rem;
+  background: #ffe6e6;
+  border: 1px solid red;
+  border-radius: 8px;
+}
+.fetch-empty {
+  font-style: italic;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .main-github-link {
+    font-size: 0.9rem;
+  }
+
+  //Error messages
+  .fetch-error,
+  .fetch-empty {
+    font-size: 0.9rem;
+  }
+}
