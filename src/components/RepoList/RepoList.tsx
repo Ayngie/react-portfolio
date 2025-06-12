@@ -55,9 +55,12 @@ const RepoList: React.FC = () => {
       try {
         setLoading(true);
         const data = await fetchRepos();
-        const filtered = data.filter((repo) =>
-          ALLOWED_REPOS.includes(repo.name)
-        );
+        const filtered = data
+          .filter((repo) => ALLOWED_REPOS.includes(repo.name))
+          .sort(
+            (a, b) =>
+              ALLOWED_REPOS.indexOf(a.name) - ALLOWED_REPOS.indexOf(b.name)
+          );
         setRepos(filtered);
         console.log('Fetched repositories:', data);
       } catch (err: unknown) {
