@@ -8,7 +8,7 @@ interface SubCardProps {
 }
 
 const SubCard: React.FC<SubCardProps> = ({ children, className = '' }) => (
-  <article className={`sub-card ${className}`}>{children}</article>
+  <section className={`sub-card ${className}`}>{children}</section>
 );
 
 export default SubCard;
