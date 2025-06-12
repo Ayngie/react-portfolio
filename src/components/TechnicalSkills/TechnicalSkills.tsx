@@ -1,7 +1,7 @@
 import React from 'react';
-import Card from '../../../components/Cards/Card/Card';
-import SubCard from '../../../components/Cards/SubCard/SubCard';
-import Skills from '../../../components/Skills/Skills';
+import Card from '../Cards/Card/Card';
+import SubCard from '../Cards/SubCard/SubCard';
+import Skills from './Skills/Skills';
 
 const TechnicalSkills: React.FC = () => (
   <Card id="technical-skills">

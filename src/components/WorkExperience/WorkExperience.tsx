@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../../../components/Cards/Card/Card';
-import SubCard from '../../../components/Cards/SubCard/SubCard';
+import Card from '../Cards/Card/Card';
+import SubCard from '../Cards/SubCard/SubCard';
 
 const WorkExperience: React.FC = () => (
   <Card id="work-experience">

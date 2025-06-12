@@ -1,9 +1,9 @@
 import React from 'react';
 import './AboutMe.scss';
 import headshot from '../../assets/headshot.jpg';
-import WorkExperience from './WorkExperience/WorkExperience';
-import TechnicalSkills from './TechnicalSkills/TechnicalSkills';
-import RelevantEducation from './RelevantEducation/RelevantEducation';
+import WorkExperience from '../../components/WorkExperience/WorkExperience';
+import TechnicalSkills from '../../components/TechnicalSkills/TechnicalSkills';
+import RelevantEducation from '../../components/RelevantEducation/RelevantEducation';
 
 const AboutMe: React.FC = () => (
   <section id="About" className="page-section" aria-labelledby="about-heading">
