@@ -15,7 +15,7 @@ const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
-      <BrowserRouter>
+      <BrowserRouter basename="/react-portfolio/">
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Layout />}>
