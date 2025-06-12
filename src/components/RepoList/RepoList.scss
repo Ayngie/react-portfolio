@@ -1,3 +1,11 @@
+.repo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; // More space between repos
+  margin: 2rem 0;
+  padding: 0;
+}
+
 .main-github-link {
   font-size: 1.2rem;
 }
@@ -16,6 +24,11 @@
 }
 
 @media (max-width: 768px) {
+  .repo-list {
+    gap: 1.2rem;
+    margin: 1rem 0;
+  }
+
   .main-github-link {
     font-size: 0.9rem;
   }

@@ -1,5 +1,16 @@
 @use '../../styles/variables' as *;
 
+.repo-screenshot {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto 2rem auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(20, 90, 50, 0.22); // Stronger shadow
+}
+
 .repo-name-and-link {
   font-size: 1.5rem;
 }
@@ -40,6 +51,11 @@
   }
 }
 @media (max-width: 768px) {
+  .repo-screenshot {
+    max-width: 100%;
+    margin: 1rem auto 1.2rem auto;
+    box-shadow: 0 4px 16px rgba(20, 90, 50, 0.16);
+  }
   .repo-name-and-link {
     font-size: 1.2rem;
   }
@@ -53,5 +69,13 @@
   .repo-live-link {
     font-size: 0.95rem;
     padding: 0.45rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .repo-screenshot {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
   }
 }

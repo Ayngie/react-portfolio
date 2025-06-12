@@ -7,6 +7,7 @@ interface RepoProps {
   customRepoName?: string;
   customRepoTechniquesInfo?: string;
   liveUrl?: string;
+  image?: string;
 }
 
 const Repo: React.FC<RepoProps> = ({
@@ -14,9 +15,17 @@ const Repo: React.FC<RepoProps> = ({
   customRepoName,
   customRepoTechniquesInfo,
   liveUrl,
+  image,
 }) => {
   return (
     <>
+      {image && (
+        <img
+          src={image}
+          alt={`Screenshot of ${customRepoName ?? repo.name} project`}
+          className="repo-screenshot"
+        />
+      )}
       <h3 className="title">
         <a
           href={repo.html_url}

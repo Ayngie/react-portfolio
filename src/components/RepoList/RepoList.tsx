@@ -19,29 +19,38 @@ const ALLOWED_REPOS = [
 // Update for new repositories as needed
 const CUSTOM_REPO_INFO: Record<
   string,
-  { displayName?: string; techniques?: string; liveUrl?: string }
+  {
+    displayName?: string;
+    techniques?: string;
+    liveUrl?: string;
+    image?: string;
+  }
 > = {
   'react-portfolio': {
     displayName: 'React Portfolio',
     techniques:
       'React/TypeScript, Vite, ESLint, SCSS, Axios, Flexbox, WCAG Guidelines',
     liveUrl: 'https://ayngie.github.io/react-portfolio/',
+    image: '/react-portfolio/react-portfolio.jpg',
   },
   'natural-guide-to-gestational-diabetes': {
     displayName: 'Natural Guide to Gestational Diabetes',
     techniques:
       'React/TypeScript, Vite, Styled Components, Lazy Loading, Cypress',
     liveUrl: 'https://ayngie.github.io/natural-guide-to-gestational-diabetes/',
+    image: '/react-portfolio/natural-guide-to-gestational-diabetes.jpg',
   },
   'health-guide': {
     displayName: 'Health Guide Template',
     techniques: 'React/TypeScript, Vite, i18next, TailwindCSS',
     liveUrl: 'https://ayngie.github.io/health-guide/',
+    image: '/react-portfolio/health-guide.jpg',
   },
   'portfolio2.0': {
     displayName: 'Previous portfolio',
     techniques: 'VanillaJS/TypeScript, Vite, ESLint, SCSS, Axios',
     liveUrl: 'https://ayngie.github.io/portfolio2.0/',
+    image: '/react-portfolio/portfolio-VanillaJS.jpg',
   },
 };
 
@@ -99,6 +108,7 @@ const RepoList: React.FC = () => {
                 customRepoName={custom.displayName}
                 customRepoTechniquesInfo={custom.techniques}
                 liveUrl={custom.liveUrl}
+                image={custom.image}
               />
             </SubCard>
           );
