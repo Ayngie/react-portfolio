@@ -20,11 +20,20 @@ const Repo: React.FC<RepoProps> = ({
   return (
     <>
       {image && (
-        <img
-          src={image}
-          alt={`Screenshot of ${customRepoName ?? repo.name} project`}
-          className="repo-screenshot"
-        />
+        <a
+          href={repo.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Go to GitHub repository for ${
+            customRepoName ?? repo.name
+          } (opens in new tab)`}
+          title={`Go to GitHub repository for ${customRepoName ?? repo.name}`}>
+          <img
+            src={image}
+            alt={`Screenshot of ${customRepoName ?? repo.name} project`}
+            className="repo-screenshot"
+          />
+        </a>
       )}
       <h3 className="title">
         <a

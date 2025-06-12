@@ -71,7 +71,6 @@ const RepoList: React.FC = () => {
               ALLOWED_REPOS.indexOf(a.name) - ALLOWED_REPOS.indexOf(b.name)
           );
         setRepos(filtered);
-        console.log('Fetched repositories:', data);
       } catch (err: unknown) {
         if (err instanceof Error) {
           setError(err.message);
