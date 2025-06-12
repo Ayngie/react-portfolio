@@ -1,22 +1,68 @@
+@use '../../../styles/variables' as *;
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background: #fff;
-  padding: 2rem 8rem 2rem 8rem;
+  padding: 2rem 8rem;
   width: 80%;
   border-radius: 0.5rem;
   box-shadow: 0 4px 16px rgba(20, 90, 50, 0.1);
   margin: 1.5rem 0;
   transition: box-shadow 0.2s;
-
   font-size: 1.2rem;
-  font-family: Playfair Display, sans-serif;
+  font-family: 'Playfair Display', sans-serif;
 
   &:hover,
   &:focus-within {
     box-shadow: 0 8px 24px rgba(20, 90, 50, 0.16);
+  }
+
+  // Return to top button inside Card
+  .card-return-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: $pastel-green;
+    color: $primary-green;
+    box-shadow: 0 2px 8px rgba(20, 90, 50, 0.07);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    font-size: 1.3rem;
+    outline: none;
+    text-decoration: none;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      background: $primary-green;
+      color: $pastel-green;
+      box-shadow: 0 4px 16px rgba(20, 90, 50, 0.15);
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+      display: block;
+    }
+  }
+
+  // Visually hidden text for accessibility
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
   }
 }
 
@@ -25,5 +71,12 @@
     width: 100%;
     padding: 1.5rem;
     font-size: 1rem;
+
+    .card-return-top {
+      width: 38px;
+      height: 38px;
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+    }
   }
 }

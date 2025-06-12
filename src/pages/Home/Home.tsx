@@ -12,7 +12,7 @@ const Home: React.FC = () => (
     <div className="heart-container">
       <div className="heart" aria-hidden="true"></div>
     </div>
-    <Card>
+    <Card noArrow>
       <h3>Hi! I'm Angelica!</h3>
       <p>Welcome to my portfolio.</p>
       <p> I'm an Osteopath turned Front End Developer. </p>
