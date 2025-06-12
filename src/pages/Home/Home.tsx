@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import Card from '../../components/Card/Card';
+import Card from '../../components/Cards/Card/Card';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => (

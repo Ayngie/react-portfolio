@@ -1,0 +1,24 @@
+.sub-card {
+  padding: 2rem 8rem 2rem 8rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(20, 90, 50, 0.1);
+  margin: 1.5rem 0;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 8px 24px rgba(20, 90, 50, 0.16);
+  }
+
+  > p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-card {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+}

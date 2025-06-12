@@ -5,6 +5,7 @@ import './Card.scss';
 interface CardProps {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => (
