@@ -1,22 +1,61 @@
-# Angie's Portfolio – Front-End Developer
+# 🎨 Angie’s Portfolio – Front-End Developer
 
-Welcome to the source code for [Angie’s Portfolio](https://github.com/Ayngie/react-portfolio.git), a modern, responsive portfolio website built with **React**, **TypeScript**, **Vite**, and **Sass**. This project showcases the skills, projects, and background of Angelica Reuterswärd, a passionate front-end developer.
+Welcome to the source code for [Angie’s Portfolio](https://github.com/Ayngie/react-portfolio), a modern, accessible, and responsive portfolio website built with **React**, **TypeScript**, **Vite**, and **Scss**.
+
+---
+
+## 👩‍💻 About
+
+This project showcases the skills, projects, and background of **Angelica Reuterswärd**, an osteopath-turned-front-end developer with a passion for creating beautiful, accessible, and performant web experiences.
 
 ---
 
 ## ✨ Features
 
-- **Modern Stack**: Built with React 19, TypeScript, and Vite for fast development and optimal performance.
-- **Responsive Design**: Fully responsive layout using Flexbox and custom SCSS for a seamless experience on all devices.
-- **Component-Based Architecture**: Reusable, well-structured React components for maintainability and scalability.
-- **Accessible Navigation**: Keyboard-friendly navigation bar with accessible markup and ARIA labels.
-- **Custom Styling**: Uses SCSS modules for modular, maintainable styles.
-- **SEO Optimized**: Includes meta tags for search engines and social media sharing (Open Graph, Twitter Cards).
-- **ESLint Integration**: Strict linting with recommended and React-specific rules for code quality.
+- **⚡ Modern Stack:** React 19, TypeScript, Vite for fast development and optimal performance.
+- **📱 Responsive Design:** Seamless experience on all devices using Flexbox, CSS Grid, and custom SCSS.
+- **♿ Accessibility:** Keyboard-friendly navigation, semantic markup, and ARIA labels following WCAG guidelines.
+- **🧩 Component Architecture:** Reusable, well-structured React components for maintainability and scalability.
+- **🎨 Custom Styling:** Modular SCSS for clean, maintainable styles.
+- **🔗 Dynamic GitHub Integration:** Displays selected GitHub repositories with custom info and live links.
+- **📬 Contact Form:** Accessible form with validation and email sending via EmailJS.
+- **🧹 Code Quality:** ESLint integration with strict rules for consistent, high-quality code.
+- **🔍 SEO Optimized:** Meta tags for search engines and social media sharing (Open Graph, Twitter Cards).
 
 ---
 
+## 🛠️ Techniques & Tools
+
+- **React 19** (functional components & hooks)
+- **TypeScript** (type safety)
+- **Vite** (fast builds & HMR)
+- **SCSS** (responsive, modular styling)
+- **EmailJS** (contact form integration)
+- **GitHub API** (dynamic project listing)
+- **ESLint** (code linting)
+- **Accessible design** (WCAG guidelines)
+
+---
+
+## 🗂️ Project Structure
+
+```
+src/
+  components/
+  pages/
+  services/
+  styles/
+  App.tsx
+  main.tsx
+  ...
+```
+
+---
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+**Made with ❤️ by Ayngie**
