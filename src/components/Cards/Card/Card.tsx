@@ -23,6 +23,7 @@ const Card: React.FC<CardProps> = ({
         href="#top"
         className="card-return-top"
         aria-label="Return to top of page"
+        title="Return to top of page"
         tabIndex={0}>
         <FaArrowUp aria-hidden="true" focusable="false" />
         <span className="visually-hidden">Return to top</span>

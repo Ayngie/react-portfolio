@@ -29,7 +29,8 @@ const Layout: React.FC = () => (
           <a
             href="#top"
             className="return-to-top-link"
-            aria-label="Return to top of page">
+            aria-label="Return to top of page"
+            title="Return to top of page">
             ↑ Return to top
           </a>
         </div>
