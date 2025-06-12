@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from '@emailjs/browser';
 import './ContactMe.scss';
 
 type FormData = {
@@ -9,16 +8,9 @@ type FormData = {
   title: string;
   message: string;
 };
-// Keys needed for third-party emailjs.com
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
 
-// Log to verify values in production
-console.log({ SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY }); // TODO: Ensure these are defined in production
-
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mdkzgyog';
 const ContactMe: React.FC = () => {
-  const formRef = useRef<HTMLFormElement | null>(null);
   const {
     register,
     handleSubmit,
@@ -26,17 +18,21 @@ const ContactMe: React.FC = () => {
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormData>();
 
-  const onSubmit = async () => {
-    if (!formRef.current) return;
+  const onSubmit = async (data: FormData) => {
     try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
-        publicKey: PUBLIC_KEY,
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       });
-      alert('Email sent!');
-      reset();
+      if (response.ok) {
+        reset();
+      } else {
+        alert('Failed to send message.');
+      }
     } catch (error) {
-      alert('Failed to send email.');
-      console.error('Error sending email:', error);
+      alert('Failed to send message.');
+      console.error('Error sending message:', error);
     }
   };
 
@@ -45,7 +41,6 @@ const ContactMe: React.FC = () => {
       <h1>Contact Me</h1>
       <div className="contact-form-container">
         <form
-          ref={formRef}
           className="contact-form"
           onSubmit={handleSubmit(onSubmit)}
           noValidate>
