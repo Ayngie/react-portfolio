@@ -9,7 +9,7 @@
   overflow: hidden;
   z-index: 10000;
   background: #fff;
-  color: #145a32;
+  color: $primary-green;
   padding: 0.5em 1em;
   border-radius: 4px;
   font-weight: bold;
@@ -20,13 +20,44 @@
     top: 1rem;
     width: auto;
     height: auto;
-    outline: 2px solid #145a32;
+    outline: 2px solid $primary-green;
     box-shadow: 0 2px 8px rgba(20, 90, 50, 0.15);
-    background: #e6f9ec;
+    background: $pastel-green;
     color: $primary-green;
   }
 }
 
 .return-to-top {
   padding: 1em;
+
+  .return-to-top-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5em 1em;
+    font-size: 1.3rem;
+    color: $primary-green;
+    background: $pastel-green;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+
+    &:hover,
+    &:focus {
+      background: $primary-green;
+      color: $pastel-green;
+      outline: 2px solid $primary-green;
+      box-shadow: 0 2px 8px rgba(20, 90, 50, 0.15);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .return-to-top-link {
+    font-size: 1.1rem;
+    padding: 0.5em 0.8em;
+  }
 }

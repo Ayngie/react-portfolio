@@ -11,7 +11,7 @@ html {
   box-sizing: border-box; //for padding to be included in width
   display: flex;
   flex-direction: column;
-  background: rgb(255, 0, 128);
+  background: $pink-theme;
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
 

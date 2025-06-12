@@ -13,17 +13,18 @@ const navLinks = [
 
 const Layout: React.FC = () => (
   <div className="app-container" id="top">
-    {/* Accessibility: Skip link for keyboard users */}
+    {/* Accessibility: Skip link for keyboard/screen reader users */}
     <a href="#main-content" className="skip-link">
       Skip to main content
     </a>
+
     <header>
       <NavBar navItems={navLinks} brandName="Angelica Reuterswärd" />
     </header>
-    <main id="main-content">
+
+    <main id="main-content" tabIndex={-1}>
       <article>
         <Outlet />
-
         <div className="return-to-top">
           <a
             href="#top"
@@ -34,6 +35,7 @@ const Layout: React.FC = () => (
         </div>
       </article>
     </main>
+
     <Footer />
   </div>
 );
