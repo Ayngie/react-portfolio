@@ -25,7 +25,7 @@ const CUSTOM_REPO_INFO: Record<
     displayName: 'React Portfolio',
     techniques:
       'React/TypeScript, Vite, ESLint, SCSS, Axios, Flexbox, WCAG Guidelines',
-    liveUrl: '', // Add live URL when available
+    liveUrl: 'https://ayngie.github.io/react-portfolio/projects',
   },
   'natural-guide-to-gestational-diabetes': {
     displayName: 'Natural Guide to Gestational Diabetes',
