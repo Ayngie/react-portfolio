@@ -7,36 +7,36 @@ const RelevantEducation: React.FC = () => (
     <h2>Relevant education</h2>
     <SubCard>
       <p>
-        Front-End Developer Degree,
+        Front-End Developer Degree,{' '}
         <a
           href="https://medieinstitutet.se/utbildningar/front-end-developer/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Medieinstitutet, Stockholm (opens in new tab)">
           Medieinstitutet, Stockholm,
-        </a>
+        </a>{' '}
         (2022-2024).
       </p>
       <p>
-        Programmering 1,
+        Programmering 1,{' '}
         <a
           href="https://www.jensenkomvux.se/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Jensen Komvux (opens in new tab)">
           Jensen Komvux,
-        </a>
+        </a>{' '}
         (2020-2021).
       </p>
       <p>
-        Webbutveckling 1,
+        Webbutveckling 1,{' '}
         <a
           href="https://www.jensenkomvux.se/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Jensen Komvux (opens in new tab)">
           Jensen Komvux,
-        </a>
+        </a>{' '}
         (2020-2020).
       </p>
     </SubCard>
