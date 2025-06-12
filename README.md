@@ -6,7 +6,7 @@ Welcome to the source code for [Angie’s Portfolio](https://github.com/Ayngie/r
 
 ## 👩‍💻 About
 
-This project showcases the skills, projects, and background of **Angelica Reuterswärd**, an osteopath-turned-front-end developer with a passion for creating beautiful, accessible, and performant web experiences.
+This project showcases the skills, projects, and background of **Ayngie**, an osteopath-turned-front-end developer with a passion for creating beautiful, accessible, and performant web experiences.
 
 ---
 
