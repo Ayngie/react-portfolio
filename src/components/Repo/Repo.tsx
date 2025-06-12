@@ -40,7 +40,11 @@ const Repo: React.FC<RepoProps> = ({
           href={repo.html_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="repo-name-and-link">
+          className="repo-name-and-link"
+          aria-label={`Go to GitHub repository for ${
+            customRepoName ?? repo.name
+          } (opens in new tab)`}
+          title={`Go to GitHub repository for ${customRepoName ?? repo.name}`}>
           {customRepoName ?? repo.name}
         </a>
       </h3>
@@ -63,7 +67,8 @@ const Repo: React.FC<RepoProps> = ({
             className="repo-live-link"
             aria-label={`View live site for ${
               customRepoName ?? repo.name
-            } (opens in new tab)`}>
+            } (opens in new tab)`}
+            title={`View live site for ${customRepoName ?? repo.name}`}>
             View Live
           </a>
         </div>
