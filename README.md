@@ -4,6 +4,14 @@ Welcome to the source code for [Angie’s Portfolio](https://github.com/Ayngie/r
 
 ---
 
+## 🌟 Project Preview
+
+![Screenshot of Angie’s Portfolio website. The homepage features a modern, clean design with a welcoming introduction, navigation bar, and a visually appealing card layout.](./public/project.jpg "Angie’s Portfolio – Homepage Preview")
+
+*Screenshot: The homepage of Angie’s Portfolio, showing the main introduction card, navigation, and a modern, accessible layout.*
+
+---
+
 ## 👩‍💻 About
 
 This project showcases the skills, projects, and background of **Ayngie**, an osteopath-turned-front-end developer with a passion for creating beautiful, accessible, and performant web experiences.
