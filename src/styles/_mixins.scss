@@ -1,7 +1,85 @@
-@mixin themeColor {
-  background: rgb(255, 0, 111);
+@use 'variables' as *;
+
+/**----------------------------------- HEART SHAPE MIXINS and ANIMATIONS -----------------------------------**/
+
+// Creates a heart shape of any size and color.
+// Usage: @include heart-shape(70px, $pink-theme);
+@mixin heart-shape($size, $color) {
+  position: relative;
+  height: $size;
+  width: $size;
+  background: $color;
+  transform: rotate(45deg);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    background: $color;
+  }
+  &::before {
+    left: -($size / 2);
+  }
+  &::after {
+    top: -($size / 2);
+    left: 0;
+  }
 }
 
+// Heart "beat" animation for large/small centered hearts (no translate)
+@keyframes heart-beat {
+  0%,
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  5% {
+    transform: rotate(45deg) scale(0.9);
+  }
+  10% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  15% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+}
+
+// Heart "beat" animation for icon hearts (includes translate for centering)
+@keyframes heart-beat-icon {
+  0%,
+  100% {
+    transform: translate(-50%, -40%) rotate(45deg) scale(0.8);
+  }
+  10%,
+  30% {
+    transform: translate(-50%, -40%) rotate(45deg) scale(1.1);
+  }
+  20%,
+  40% {
+    transform: translate(-50%, -40%) rotate(45deg) scale(0.95);
+  }
+  50% {
+    transform: translate(-50%, -40%) rotate(45deg) scale(1);
+  }
+  60%,
+  80% {
+    transform: translate(-50%, -40%) rotate(45deg) scale(0.9);
+  }
+  70% {
+    transform: translate(-50%, -40%) rotate(45deg) scale(1);
+  }
+  90% {
+    transform: translate(-50%, -40%) rotate(45deg) scale(0.85);
+  }
+}
+
+// Large animated heart, centered in container
+// Usage: .container { @include largeHeart; }
 @mixin largeHeart {
   height: 30vh;
   display: flex;
@@ -9,52 +87,13 @@
   align-items: center;
 
   .heart {
-    position: relative;
-    height: 140px;
-    width: 140px;
-    transform: rotate(45deg);
-    animation: heart 1.5s infinite;
-    @include themeColor;
-  }
-  .heart::before,
-  .heart::after {
-    position: absolute;
-    content: '';
-    height: 140px;
-    width: 140px;
-    border-radius: 50%;
-    @include themeColor;
-  }
-  .heart::before {
-    left: -70px;
-  }
-  .heart::after {
-    top: -70px;
-    left: 0px;
-  }
-
-  @keyframes heart {
-    0% {
-      transform: rotate(45deg) scale(0.8);
-    }
-    5% {
-      transform: rotate(45deg) scale(0.9);
-    }
-    10% {
-      transform: rotate(45deg) scale(0.8);
-    }
-    15% {
-      transform: rotate(45deg) scale(1);
-    }
-    50% {
-      transform: rotate(45deg) scale(0.8);
-    }
-    100% {
-      transform: rotate(45deg) scale(0.8);
-    }
+    @include heart-shape(140px, $pink-theme);
+    animation: heart-beat 1.5s infinite;
   }
 }
 
+// Small animated heart, centered in container
+// Usage: .container { @include smallHeart; }
 @mixin smallHeart {
   height: 15vh;
   display: flex;
@@ -62,49 +101,53 @@
   align-items: center;
 
   .heart {
-    position: relative;
-    height: 70px;
-    width: 70px;
-    transform: rotate(45deg);
-    animation: heart 1.5s infinite;
-    @include themeColor;
-  }
-  .heart::before,
-  .heart::after {
-    position: absolute;
-    content: '';
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    @include themeColor;
-  }
-  .heart::before {
-    left: -35px;
-  }
-  .heart::after {
-    top: -35px;
-    left: 0px;
-  }
-
-  // Reuse the same keyframes
-  @keyframes heart {
-    0% {
-      transform: rotate(45deg) scale(0.8);
-    }
-    5% {
-      transform: rotate(45deg) scale(0.9);
-    }
-    10% {
-      transform: rotate(45deg) scale(0.8);
-    }
-    15% {
-      transform: rotate(45deg) scale(1);
-    }
-    50% {
-      transform: rotate(45deg) scale(0.8);
-    }
-    100% {
-      transform: rotate(45deg) scale(0.8);
-    }
+    @include heart-shape(70px, $pink-theme);
+    animation: heart-beat 1.5s infinite;
   }
 }
+
+// Hover heart for icons (small, positioned, animates on hover/focus)
+// Usage: .icon-wrapper { @include hover-heart; }
+@mixin hover-heart($heart-color: $pink-theme, $size: 12px, $top: -30%) {
+  position: relative;
+
+  .heart {
+    position: absolute;
+    left: 50%;
+    top: $top;
+    width: $size;
+    height: $size;
+    transform: translate(-50%, -40%) rotate(45deg) scale(0.8);
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: $heart-color;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: $size;
+      height: $size;
+      background: $heart-color;
+      border-radius: 50%;
+    }
+    &::before {
+      top: -($size / 2);
+      left: 0;
+    }
+    &::after {
+      left: -($size / 2);
+      top: 0;
+    }
+  }
+
+  // Show and animate heart on hover/focus
+  &:hover .heart,
+  &:focus-within .heart {
+    opacity: 0.85; //Slight opacity for more subtle effect
+    animation: heart-beat-icon 1.2s infinite;
+  }
+}
+
+/**----------------------------------- END of HEART section -----------------------------------**/

@@ -1,10 +1,11 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as mixins;
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #e6f9ec;
+  background: $pastel-green;
 
   .footer-links {
     display: flex;
@@ -13,15 +14,26 @@
     gap: 2rem;
     margin-bottom: 0.75rem;
 
+    .icon-wrapper {
+      @include mixins.hover-heart();
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     a {
       display: flex;
       align-items: center;
+      justify-content: center;
       color: $primary-green;
       transition: transform 0.15s, color 0.2s;
       cursor: pointer;
+      min-width: 44px; // WCAG recommended minimum
+      min-height: 44px;
 
       &:hover {
-        color: #e75480;
+        color: $pink-theme;
 
         cursor: grab; // Fallback for browsers that don't support custom cursors
         cursor: -webkit-grab;
@@ -36,6 +48,13 @@
         cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="28" font-size="28">🌟</text></svg>')
             16 0,
           grabbing;
+      }
+
+      &:hover,
+      &:focus-within {
+        background: rgba(white, 1);
+        border-radius: 50%;
+        transition: background 0.2s;
       }
 
       &:hover,
