@@ -68,9 +68,9 @@ const AboutMe: React.FC = () => (
         </h3>
         <p>
           Worked in cross-functional agile (SCRUM) CI/CD / DevOps team,
-          participating in agile ceremonies (daily stand-ups, JIRA, spring
-          planning & retrospectives, WoW, etc.), and a broad tech-stack in a
-          large-scale corporate environment.
+          participating in agile ceremonies (daily stand-ups, JIRA, sprint
+          planning & retrospectives, Ways of Working, etc.), and a broad
+          tech-stack in a large-scale corporate environment.
         </p>
         <p>
           Participated in refactoring old Angular project into new
