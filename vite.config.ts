@@ -1,8 +1,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { copyFileSync } from 'fs';
 
-// https://vite.dev/config/
 export default defineConfig({
   base: '/<react-portfolio>/',
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'copy-404',
+      closeBundle: () => {
+        // Copy index.html to 404.html
+        copyFileSync(
+          resolve(__dirname, 'dist/index.html'),
+          resolve(__dirname, 'dist/404.html')
+        );
+      },
+    },
+  ],
 });
