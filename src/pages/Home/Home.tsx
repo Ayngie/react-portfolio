@@ -44,7 +44,7 @@ const Home: React.FC = () => (
       </p>
       <p>
         Feel free to <Link to="/contact">contact me</Link> regarding programming
-        jobs, learn more <Link to="/about">about me</Link>, or check out some of
+        jobs, read more <Link to="/about">about me</Link>, or check out some of
         my favorite <Link to="/projects">projects</Link>.
       </p>
     </Card>
