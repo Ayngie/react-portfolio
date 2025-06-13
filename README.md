@@ -1,6 +1,6 @@
 # 🎨 Angie’s Portfolio – Front-End Developer
 
-Welcome to the source code for [Angie’s Portfolio](https://github.com/Ayngie/react-portfolio), a modern, accessible, and responsive portfolio website built with **React**, **TypeScript**, **Vite**, and **Scss**.
+Welcome to the source code for [Angie’s Portfolio](https://ayngie.github.io/react-portfolio/), a modern, accessible, and responsive portfolio website built with **React**, **TypeScript**, **Vite**, and **Scss**.
 
 ---
 
