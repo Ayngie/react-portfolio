@@ -15,7 +15,7 @@ const AboutMe: React.FC = () => (
         className="about-headshot"
       />
       <blockquote>
-        <p>"Front-End Developer with Full-Stack ambitions!"</p>
+        <p>"Junior Full-Stack Developer with great ambitions!"</p>
       </blockquote>
       <figcaption>
         Angelica Reuterswärd, Developer at heart since 2020
