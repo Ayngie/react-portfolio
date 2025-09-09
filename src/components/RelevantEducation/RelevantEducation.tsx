@@ -6,27 +6,26 @@ const RelevantEducation: React.FC = () => (
   <Card id="relevant-education">
     <h2>Relevant education</h2>
     <SubCard>
-      <p>
-        System Developer .Net (ongoing), at Medieinstitutet, Stockholm {' '}
+      <p> Currently studying {' '}
         <a
           href="https://medieinstitutet.se/utbildningar/systemutvecklare-net/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Medieinstitutet, Stockholm (opens in new tab)">
-          (link to education)
+          aria-label="System Developer education page at Medieinstitutet, Stockholm (opens in new tab)">
+          System Developer .Net at Medieinstitutet, 
         </a>{' '}
-        (2025-2027).
+        (Distans, 2025-2027).
       </p>
       <p>
-        Front-End Developer Degree,{' '}
+        Graduated with degree as {' '}
         <a
           href="https://medieinstitutet.se/utbildningar/front-end-developer/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Medieinstitutet, Stockholm (opens in new tab)">
-          Medieinstitutet, Stockholm,
+          aria-label="Front-End Developer education page at Medieinstitutet, Stockholm (opens in new tab)">
+          Front-End Developer at Medieinstitutet,
         </a>{' '}
-        (2022-2024).
+        (Stockholm, 2022-2024).
       </p>
       <p>
         Programmering 1,{' '}
