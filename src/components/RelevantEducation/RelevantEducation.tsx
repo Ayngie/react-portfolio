@@ -7,6 +7,17 @@ const RelevantEducation: React.FC = () => (
     <h2>Relevant education</h2>
     <SubCard>
       <p>
+        System Developer .Net (ongoing),{' '}
+        <a
+          href="https://medieinstitutet.se/utbildningar/systemutvecklare-net/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Medieinstitutet, Stockholm (opens in new tab)">
+          Medieinstitutet, Stockholm,
+        </a>{' '}
+        (2025-2027).
+      </p>
+      <p>
         Front-End Developer Degree,{' '}
         <a
           href="https://medieinstitutet.se/utbildningar/front-end-developer/"
