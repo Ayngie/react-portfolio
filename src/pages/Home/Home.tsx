@@ -42,7 +42,7 @@ const Home: React.FC = () => (
         </a>
         , and came out ready to create amazing web experiences!
       </p>
-      <p> The story didn't end there, however! As I've also found a passion for back-end development, I am currently back at Medieinstitutet furthering my competencies with their education
+      <p> The story didn't end there, however! As I've also found a passion for back-end development, I am currently back at Medieinstitutet furthering my competencies with their education {' '}
         <a
           href="https://medieinstitutet.se/utbildningar/systemutvecklare-net/"
           target="_blank"
