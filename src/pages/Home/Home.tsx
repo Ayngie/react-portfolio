@@ -40,10 +40,20 @@ const Home: React.FC = () => (
           aria-label="PostNord Group IT (opens in new tab)">
           PostNord Group IT
         </a>
-        , and now I'm here - ready to create amazing web experiences!
+        , and came out ready to create amazing web experiences!
+      </p>
+      <p> The story didn't end there, however! As I've also found a passion for back-end development, I am currently back at Medieinstitutet furthering my competencies with their education
+        <a
+          href="https://medieinstitutet.se/utbildningar/systemutvecklare-net/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Medieinstitutet, Stockholm (opens in new tab)">
+          System Developer .Net
+        </a> 
+        !
       </p>
       <p>
-        Feel free to <Link to="/contact">contact me</Link> regarding programming
+        Don't hesitate to <Link to="/contact">contact me</Link> regarding programming
         jobs, read more <Link to="/about">about me</Link>, or check out some of
         my favorite <Link to="/projects">projects</Link>.
       </p>
