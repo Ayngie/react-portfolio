@@ -7,13 +7,13 @@ const RelevantEducation: React.FC = () => (
     <h2>Relevant education</h2>
     <SubCard>
       <p>
-        System Developer .Net (ongoing),{' '}
+        System Developer .Net (ongoing), at Medieinstitutet, Stockholm {' '}
         <a
           href="https://medieinstitutet.se/utbildningar/systemutvecklare-net/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Medieinstitutet, Stockholm (opens in new tab)">
-          Medieinstitutet, Stockholm,
+          (link to education)
         </a>{' '}
         (2025-2027).
       </p>
